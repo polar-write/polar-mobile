@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import {
   TextInput,
   StyleSheet,
@@ -13,16 +13,41 @@ import theme from '@theme';
 interface PolarMarkdownProps extends TextInputProps {
   style?: TextStyle;
   wrapperStyle?: ViewStyle;
+  focus?: boolean;
 }
 
 const PolarMarkdown: React.FC<PolarMarkdownProps> = ({
   style,
   wrapperStyle,
+  focus,
   ...props
 }) => {
+  const inputRef = useRef<TextInput>(null);
+  const scrollRef = useRef<InputScrollView>(null);
+
+  function handleTouch() {
+    if (!inputRef.current?.isFocused()) {
+      inputRef.current?.focus();
+      scrollRef.current?.scrollToEnd();
+    }
+  }
+
+  useEffect(() => {
+    if (focus) {
+      inputRef.current?.focus();
+      scrollRef.current?.scrollToEnd();
+    }
+  }, [focus]);
+
   return (
-    <InputScrollView topOffset={34} style={[styles.wrapper, wrapperStyle]}>
+    <InputScrollView
+      ref={scrollRef}
+      topOffset={44}
+      style={[styles.wrapper, wrapperStyle]}
+      contentContainerStyle={styles.container}
+      onTouchEnd={handleTouch}>
       <TextInput
+        ref={inputRef}
         style={[styles.input, style]}
         multiline
         selectionColor={theme.colors.polar_6}
@@ -41,6 +66,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexGrow: 1,
   },
+  container: {paddingBottom: 50},
   input: {
     paddingHorizontal: 40,
     paddingTop: 25,

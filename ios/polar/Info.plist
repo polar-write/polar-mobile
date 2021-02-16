@@ -37,8 +37,6 @@
 			</dict>
 		</dict>
 	</dict>
-	<!-- <key>NSLocationWhenInUseUsageDescription</key>
-	<string/> -->
 	<key>NSCameraUsageDescription</key>
 	<string>Polar needs camera permission to scan sync code.</string>
 	<key>UILaunchStoryboardName</key>
@@ -62,6 +60,7 @@
 		<string>Mulish-Medium.ttf</string>
 		<string>Mulish-Regular.ttf</string>
 		<string>Mulish-SemiBold.ttf</string>
+		<string>Mulish-Italic.ttf</string>
 	</array>
 </dict>
 </plist>

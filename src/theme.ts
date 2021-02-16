@@ -14,5 +14,6 @@ export default {
     medium: 'Mulish-Medium',
     regular: 'Mulish-Regular',
     light: 'Mulish-Light',
+    italic: 'Mulish-Italic',
   },
 };

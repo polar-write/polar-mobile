@@ -26,6 +26,7 @@
 		AC4A226EE8684554BF5DF917 /* Mulish-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C74AB510A242441D9EF36AAB /* Mulish-Bold.ttf */; };
 		D9C87A2142864C189B52CFBC /* Mulish-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2E5C6723D6644784AF910CFC /* Mulish-SemiBold.ttf */; };
 		FA62500F0B995C9F156DF471 /* libPods-polar-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A40406BF997AB0675FB952C /* libPods-polar-tvOSTests.a */; };
+		E3F5CE1772174307A4BC105D /* Mulish-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30C7092AC64048EFBA10F830 /* Mulish-Italic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F314D97F097F432BB6C128A7 /* Mulish-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mulish-Regular.ttf"; path = "../assets/fonts/Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		F3FEA973DF2C286A9A15789E /* libPods-polar-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-polar-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C7092AC64048EFBA10F830 /* Mulish-Italic.ttf */ = {isa = PBXFileReference; name = "Mulish-Italic.ttf"; path = "../assets/fonts/Mulish-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				5D6D017538034CFCB2F0C88B /* Mulish-Medium.ttf */,
 				F314D97F097F432BB6C128A7 /* Mulish-Regular.ttf */,
 				2E5C6723D6644784AF910CFC /* Mulish-SemiBold.ttf */,
+				30C7092AC64048EFBA10F830 /* Mulish-Italic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				25C1B6749C214D6188D571F6 /* Mulish-Medium.ttf in Resources */,
 				5CB998A8A14E4EC1B16A4191 /* Mulish-Regular.ttf in Resources */,
 				D9C87A2142864C189B52CFBC /* Mulish-SemiBold.ttf in Resources */,
+				E3F5CE1772174307A4BC105D /* Mulish-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
