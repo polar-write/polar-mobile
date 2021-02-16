@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
   },
   segmentedControl: {
     flex: 1,
-    minWidth: 200,
+    maxWidth: 200,
     marginHorizontal: 10,
   },
 });
