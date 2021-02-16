@@ -18,6 +18,7 @@ import {
   X,
 } from 'react-native-feather';
 import Clipboard from '@react-native-clipboard/clipboard';
+import QRCode from 'react-native-qrcode-svg';
 
 import theme from '@theme';
 import Typography from '@components/Typography';
@@ -78,12 +79,12 @@ const Sync = ({navigation}: {navigation: any}) => {
         style={styles.keyboardAvoidingView}
         behavior="padding">
         <ScrollView contentContainerStyle={styles.container}>
-          <Image
-            source={require('../../assets/images/polar.png')}
-            style={styles.logoImage}
-          />
           {!syncCode ? (
             <>
+              <Image
+                source={require('../../assets/images/polar.png')}
+                style={styles.logoImage}
+              />
               {!showInput ? (
                 <View style={styles.row}>
                   <Button
@@ -172,6 +173,19 @@ const Sync = ({navigation}: {navigation: any}) => {
             </>
           ) : (
             <View>
+              <View style={styles.logoImage}>
+                <Typography variant="caption" style={styles.scanToSync}>
+                  Scan to sync
+                </Typography>
+                <QRCode
+                  value={syncCode}
+                  size={200}
+                  backgroundColor={theme.colors.polar_2}
+                  logo={require('../../assets/images/polar.png')}
+                  logoSize={25}
+                  logoBackgroundColor={theme.colors.polar_2}
+                />
+              </View>
               {lastSync && (
                 <Typography style={styles.lastSync}>
                   Last sync: {moment(lastSync).calendar()}
@@ -237,6 +251,7 @@ const styles = StyleSheet.create({
     height: 200,
     marginTop: -60,
     marginBottom: 30,
+    alignSelf: 'center',
   },
   row: {
     flexDirection: 'row',
@@ -273,6 +288,10 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     alignSelf: 'center',
     textAlign: 'center',
+  },
+  scanToSync: {
+    textAlign: 'center',
+    marginBottom: 5,
   },
 });
 
